@@ -1,101 +1,108 @@
 {
-  "name": "@ckeditor/ckeditor5-build-decoupled-document",
-  "version": "18.0.0",
-  "description": "The document editor build of CKEditor 5 – the best browser-based rich text editor.",
-  "keywords": [
-    "ckeditor5-build",
-    "ckeditor",
-    "ckeditor5",
-    "ckeditor 5",
-    "wysiwyg",
-    "rich text",
-    "editor",
-    "html",
-    "contentEditable",
-    "editing",
-    "operational transformation",
-    "ot",
-    "collaboration",
-    "collaborative",
-    "real-time",
-    "framework"
-  ],
-  "main": "./build/ckeditor.js",
-  "files": [
-    "build"
-  ],
-  "devDependencies": {
-    "@ckeditor/ckeditor5-adapter-ckfinder": "^18.0.0",
-    "@ckeditor/ckeditor5-alignment": "^18.0.0",
-    "@ckeditor/ckeditor5-autoformat": "^18.0.0",
-    "@ckeditor/ckeditor5-basic-styles": "^18.0.0",
-    "@ckeditor/ckeditor5-block-quote": "^18.0.0",
-    "@ckeditor/ckeditor5-ckfinder": "^18.0.0",
-    "@ckeditor/ckeditor5-core": "^18.0.0",
-    "@ckeditor/ckeditor5-dev-utils": "^12.0.0",
-    "@ckeditor/ckeditor5-dev-webpack-plugin": "^8.0.0",
-    "@ckeditor/ckeditor5-easy-image": "^18.0.0",
-    "@ckeditor/ckeditor5-editor-decoupled": "^18.0.0",
-    "@ckeditor/ckeditor5-essentials": "^18.0.0",
-    "@ckeditor/ckeditor5-font": "^18.0.0",
-    "@ckeditor/ckeditor5-heading": "^18.0.0",
-    "@ckeditor/ckeditor5-highlight": "^18.0.0",
-    "@ckeditor/ckeditor5-image": "^18.0.0",
-    "@ckeditor/ckeditor5-indent": "^18.0.0",
-    "@ckeditor/ckeditor5-link": "^18.0.0",
-    "@ckeditor/ckeditor5-list": "^18.0.0",
-    "@ckeditor/ckeditor5-media-embed": "^18.0.0",
-    "@ckeditor/ckeditor5-paragraph": "^18.0.0",
-    "@ckeditor/ckeditor5-paste-from-office": "^18.0.0",
-    "@ckeditor/ckeditor5-table": "^18.0.0",
-    "@ckeditor/ckeditor5-typing": "^18.0.0",
-    "@ckeditor/ckeditor5-theme-lark": "^18.0.0",
-    "eslint": "^5.5.0",
-    "eslint-config-ckeditor5": "^2.0.0",
-    "husky": "^1.3.1",
-    "lint-staged": "^7.0.0",
-    "stylelint": "^11.1.1",
-    "postcss-loader": "^3.0.0",
-    "raw-loader": "^3.1.0",
-    "style-loader": "^1.0.0",
-    "stylelint-config-ckeditor5": "^1.0.0",
-    "terser-webpack-plugin": "^2.2.1",
-    "webpack": "^4.39.1",
-    "webpack-cli": "^3.3.6"
-  },
-  "engines": {
-    "node": ">=8.0.0",
-    "npm": ">=5.7.1"
-  },
-  "author": "CKSource (http://cksource.com/)",
-  "license": "GPL-2.0-or-later",
-  "homepage": "https://ckeditor.com/ckeditor-5",
-  "bugs": "https://github.com/ckeditor/ckeditor5/issues",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ckeditor/ckeditor5-build-decoupled-document.git"
-  },
-  "scripts": {
-    "build": "webpack --mode production",
-    "lint": "eslint --quiet '**/*.js'",
-    "stylelint": "stylelint --quiet --allow-empty-input 'theme/**/*.css' 'docs/**/*.css'",
-    "preversion": "npm run build; if [ -n \"$(git status src/ckeditor.js build/ --porcelain)\" ]; then git add -u src/ckeditor.js build/ && git commit -m 'Internal: Build.'; fi"
-  },
-  "lint-staged": {
-    "**/*.js": [
-      "eslint --quiet"
+    "name": "@devaptas/ckeditor5-build-decoupled-document",
+    "version": "17.0.0",
+    "description": "The document editor build of CKEditor 5 – the best browser-based rich text editor.",
+    "keywords": [
+        "ckeditor5-build",
+        "ckeditor",
+        "ckeditor5",
+        "ckeditor 5",
+        "wysiwyg",
+        "rich text",
+        "editor",
+        "html",
+        "contentEditable",
+        "editing",
+        "operational transformation",
+        "ot",
+        "collaboration",
+        "collaborative",
+        "real-time",
+        "framework"
     ],
-    "**/*.css": [
-      "stylelint --quiet --allow-empty-input"
-    ]
-  },
-  "eslintIgnore": [
-    "build/**",
-    "packages/**"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "main": "./build/ckeditor.js",
+    "files": [
+        "build"
+    ],
+    "devDependencies": {
+        "@ckeditor/ckeditor5-adapter-ckfinder": "^17.0.0",
+        "@ckeditor/ckeditor5-alignment": "^17.0.0",
+        "@ckeditor/ckeditor5-autoformat": "^17.0.0",
+        "@ckeditor/ckeditor5-basic-styles": "^17.0.0",
+        "@ckeditor/ckeditor5-block-quote": "^17.0.0",
+        "@ckeditor/ckeditor5-ckfinder": "^17.0.0",
+        "@ckeditor/ckeditor5-core": "^17.0.0",
+        "@ckeditor/ckeditor5-dev-utils": "^12.0.0",
+        "@ckeditor/ckeditor5-dev-webpack-plugin": "^8.0.0",
+        "@ckeditor/ckeditor5-easy-image": "^17.0.0",
+        "@ckeditor/ckeditor5-editor-decoupled": "^17.0.0",
+        "@ckeditor/ckeditor5-engine": "^17.0.0",
+        "@ckeditor/ckeditor5-essentials": "^17.0.0",
+        "@ckeditor/ckeditor5-font": "^17.0.0",
+        "@ckeditor/ckeditor5-heading": "^17.0.0",
+        "@ckeditor/ckeditor5-highlight": "^17.0.0",
+        "@ckeditor/ckeditor5-image": "^17.0.0",
+        "@ckeditor/ckeditor5-inspector": "^1.3.0",
+        "@ckeditor/ckeditor5-link": "^17.0.0",
+        "@ckeditor/ckeditor5-list": "^17.0.0",
+        "@ckeditor/ckeditor5-media-embed": "^17.0.0",
+        "@ckeditor/ckeditor5-paragraph": "^17.0.0",
+        "@ckeditor/ckeditor5-paste-from-office": "^17.0.0",
+        "@ckeditor/ckeditor5-table": "^17.0.0",
+        "@ckeditor/ckeditor5-theme-lark": "^17.0.0",
+        "@ckeditor/ckeditor5-utils": "^17.0.0",
+        "@ckeditor/ckeditor5-horizontal-line": "^17.0.0",
+        "@ckeditor/ckeditor5-page-break": "^17.0.0",
+        "@ckeditor/ckeditor5-indent": "^17.0.0",
+        "@ckeditor/ckeditor5-upload": "^17.0.0",
+        "eslint": "^5.5.0",
+        "eslint-config-ckeditor5": "^2.0.0",
+        "husky": "^1.3.1",
+        "lint-staged": "^7.0.0",
+        "postcss-loader": "^3.0.0",
+        "raw-loader": "^3.1.0",
+        "style-loader": "^1.0.0",
+        "uglifyjs-webpack-plugin": "^1.3.0",
+        "webpack": "^4.39.1",
+        "webpack-cli": "^3.3.6"
+    },
+    "engines": {
+        "node": ">=8.0.0",
+        "npm": ">=5.7.1"
+    },
+    "author": "CKSource (http://cksource.com/)",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://ckeditor.com/ckeditor-5",
+    "bugs": "https://github.com/devaptas/ckeditor5-build-decoupled-document/issues",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/devaptas/ckeditor5-build-decoupled-document.git"
+    },
+    "scripts": {
+        "build": "webpack --mode production",
+        "build-dev": "webpack --mode development",
+        "lint": "eslint --quiet '**/*.js'",
+        "preversion": "npm run build; if [ -n \"$(git status src/ckeditor.js build/ --porcelain)\" ]; then git add -u src/ckeditor.js build/ && git commit -m 'Internal: Build.'; fi"
+    },
+    "lint-staged": {
+        "**/*.js": [
+            "eslint --quiet"
+        ]
+    },
+    "eslintIgnore": [
+        "build/**",
+        "packages/**"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "dependencies": {
+        "@ckeditor/ckeditor5-autosave": "^17.0.0",
+        "@ckeditor/ckeditor5-remove-format": "^17.0.0",
+        "@ckeditor/ckeditor5-ui": "^17.0.0",
+        "@ckeditor/ckeditor5-widget": "^17.0.0",
+        "ckeditor5-simple-upload": "^1.0.6"
     }
-  }
 }

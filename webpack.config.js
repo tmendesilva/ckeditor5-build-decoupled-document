@@ -48,8 +48,8 @@ module.exports = {
 		new CKEditorWebpackPlugin( {
 			// UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.
 			// When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.js).
-			language: 'en',
-			additionalLanguages: 'all'
+			language: 'pt-br',
+			// additionalLanguages: 'all'
 		} ),
 		new webpack.BannerPlugin( {
 			banner: bundler.getLicenseBanner(),
@@ -61,7 +61,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.svg$/,
-				use: [ 'raw-loader' ]
+				use: ['raw-loader']
 			},
 			{
 				test: /\.css$/,

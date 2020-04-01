@@ -1,0 +1,10 @@
+
+/*** CARDIO ***/
+table.cardio-wrapper{
+    width: 100%;
+}
+
+table.cardio-wrapper td.cardio-title-cell{
+    font-weight: bold;
+    padding-top: 5px;
+}
